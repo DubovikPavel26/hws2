@@ -1,5 +1,7 @@
 .message {
-
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
 }
 
 .imageAndText {
@@ -7,10 +9,24 @@
 }
 
 .imageAndText img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 5px;
 
 }
 
 .text {
+    background-color: #0066cc;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 7px 7px 7px;
+    color: #DDEEFF;
+    margin: 6px 22px 9px 22px;
+
 
 }
 
@@ -19,6 +35,8 @@
 }
 
 .name {
+    text-align: right;
+
 
 }
 
@@ -27,5 +45,10 @@
 }
 
 .time {
+   position: relative;
+    top: 50px;
+    left: -6px;
+
+    font-size: 10px;
 
 }
