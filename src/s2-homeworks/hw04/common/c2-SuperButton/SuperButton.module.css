@@ -1,25 +1,43 @@
 .button {
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+
 }
 
 .disabled {
+    background-color: #0066cc;
+    opacity: 0.5;
 }
 
 .secondary {
+    background-color: #ffff;
+    border: 1px solid deepskyblue ;
+    color: deepskyblue;
 }
 
 .default {
+    background-color: blue;
+    border: none;
+
 }
 
 .red {
+    background-color: red;
+    border: none;
+
 }
 
 .default:hover {
+    cursor: pointer;
 }
 
 .red:hover {
+    cursor: pointer;
 }
 
 .secondary:hover {
+    cursor: pointer;
 }
 
 
@@ -27,6 +45,7 @@
 }
 
 .secondary:active {
+
 }
 
 .red:active {

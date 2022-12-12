@@ -2,6 +2,10 @@
 }
 
 .input {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 .inputWrapper {
