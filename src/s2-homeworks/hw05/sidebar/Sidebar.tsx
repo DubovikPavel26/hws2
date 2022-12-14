@@ -42,6 +42,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         to={PATH.JUNIOR}
                         onClick={handleClose}
                         className={(param) => param.isActive ? s.active : '' }
+                        end
                         // className={...} // делает студент
                     >
                         Junior
@@ -51,6 +52,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         to={PATH.JUNIOR_PLUS}
                         onClick={handleClose}
                         className={(param) => param.isActive ? s.active : '' }
+
                         // className={...} // делает студент
                     >
                         Junior Plus
