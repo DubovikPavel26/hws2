@@ -33,15 +33,21 @@ function Clock() {
     const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
         setShow(false)
     }
+    let formatter1 = new Intl.DateTimeFormat("en", {
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric"
+    });
+    let formatter2 = new Intl.DateTimeFormat("en-US")
 
-    const stringTime = date.toLocaleTimeString() || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = date.toLocaleDateString() || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    const stringTime = formatter1.format(date) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    const stringDate = formatter2.format(date) || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    let formatter1 = new Intl.DateTimeFormat("en", {weekday: "long"})
-    let formatter2 = new Intl.DateTimeFormat("en", {month: "long"})
-    const stringDay =  formatter1.format(date)  || <br/> // пишут студенты
-    const stringMonth = formatter2.format(date) || <br/> // пишут студенты
+    let formatter3 = new Intl.DateTimeFormat("en", {weekday: "long"})
+    let formatter4 = new Intl.DateTimeFormat("en", {month: "long"})
+    const stringDay =  formatter3.format(date)  || <br/> // пишут студенты
+    const stringMonth = formatter4.format(date) || <br/> // пишут студенты
 
     return (
         <div className={s.clock}>
