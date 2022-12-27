@@ -33,12 +33,11 @@ function Clock() {
     const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
         setShow(false)
     }
-    let formatter1 = new Intl.DateTimeFormat("en", {
+    let formatter1 = new Intl.DateTimeFormat("ru", {
         hour: "numeric",
-        minute: "numeric",
-        second: "numeric"
+        minute: "numeric"
     });
-    let formatter2 = new Intl.DateTimeFormat("en-US")
+    let formatter2 = new Intl.DateTimeFormat("ru")
 
     const stringTime = formatter1.format(date) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
     const stringDate = formatter2.format(date) || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
